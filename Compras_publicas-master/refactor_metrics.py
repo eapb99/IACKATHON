@@ -4,7 +4,7 @@ from statistics import mean
 import numpy as np
 import pandas as pd
 import os
-
+from matriz import save_files
 ruta_actual = os.path.dirname(os.path.abspath(__file__))
 ruta_padre = os.path.dirname(ruta_actual)
 
@@ -270,5 +270,5 @@ suma_des = create_dict_desv(result)
 divi = calculate_division(suma_des)
 add_divi_des(result, divi)
 add_metrics(result)
-create_metrics(result)
-create_file(result, 'proveedores6')
+save_files(result)
+#create_file(result, 'proveedores6')

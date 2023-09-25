@@ -2,17 +2,37 @@ import json
 import pickle
 import numpy as np
 import pandas as pd
-from collections import Counter
+import os
+
+ruta_actual = os.path.dirname(os.path.abspath(__file__))
+ruta_padre = os.path.dirname(ruta_actual)
 
 
-def cargar_datos():
-    df = pd.read_json('proveedores6.json').T
+def create_dataframe(result):
+    data1 = {}
+    for key, values in result.items():
+        if values.get('filtro') == 1:
+            data1[key] = values
+    rows = []
+    for key, value in data1.items():
+        value.pop('BIDS', None)
+        value['id_ruc'] = key
+        rows.append(value)
+
+    df = pd.DataFrame(rows)
+    df = df[['id_ruc'] + [col for col in df.columns if col != 'id_ruc']]
+    return df
+
+
+def cargar_datos(dict_proveedores):
+
+    df = pd.DataFrame.from_dict(dict_proveedores, orient='index')
     df = df[df['filtro'] == 1]
     df = df.reset_index().rename(columns={'index': 'id_ruc'})
 
     with open('dbProcurementNew4.json', encoding='utf-8') as json_file:
         data = json.load(json_file)
-
+    df = create_dataframe(dict_proveedores)
     return df, data
 
 
@@ -48,20 +68,15 @@ def filtrar_matriz_y_dataframe(Matriz, df):
 
 
 def guardar_datos(MatrizFinal, df_filtrado):
-    with open('matriz_adj_colec_3.dat', 'wb') as file:
+    with open(os.path.join(ruta_padre, "matriz.dat"), 'wb') as file:
         pickle.dump(MatrizFinal, file)
-    # Si necesitas guardar el DataFrame filtrado, descomenta la siguiente línea
-    df_filtrado.to_csv('dataframe_filtrado.csv', index=False)
+    df_filtrado.to_csv(os.path.join(ruta_padre, 'dataframe_filtrado.csv'), index=False)
 
 
-def main():
-    df, data = cargar_datos()
+def save_files(diccionario):
+    df, data = cargar_datos(diccionario)
     d, lista_rucs = construir_diccionario_bids(df, data)
     Matriz = construir_matriz_adjacencia(d, lista_rucs)
     MatrizFinal, df_filtrado = filtrar_matriz_y_dataframe(Matriz, df)
     guardar_datos(MatrizFinal, df_filtrado)
     print("Datos guardados correctamente.")
-
-
-if __name__ == "__main__":
-    main()
