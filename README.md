@@ -16,13 +16,13 @@ A continuación los pasos a detalle:
 ## Estructura
 Este proyecto está compuesto por tres subproyectos internos, cada uno con una funcionalidad específica. A continuación, se describen brevemente cada uno de estos subproyectos:
 
-### 1. Compras Públicas
+- ### Compras Públicas
 Este subproyecto se encarga de calcular métricas de transparencia. Estas métricas son esenciales para entender el comportamiento de un proveedor en los diferentes contratos en los que ha participado. El resultado de este proceso es un archivo CSV que contiene todas las métricas calculadas.
 
-### 2. AnomalyDetection
+- ### AnomalyDetection
 El subproyecto `AnomalyDetection` toma el CSV de las métricas de transparencia creado por el subproyecto `Compras Públicas` y lo analiza para encontrar proveedores anómalos basados en sus métricas. Como resultado, se genera un nuevo CSV que incluye las mismas métricas, pero con cuatro columnas adicionales que permiten identificar qué proveedores son anómalos y cuáles no.
 
-### 3. Visualization
+- ### Visualization
 Finalmente, el subproyecto `Visualization` utiliza el último CSV generado para crear un grafo. En este grafo, los proveedores que han sido identificados como anómalos se representan en color rojo, permitiendo así una fácil identificación visual.
 
 Cada uno de estos subproyectos contribuye a la finalidad principal del proyecto, que es analizar y visualizar el comportamiento de los proveedores en contratos públicos, identificando posibles anomalías.
@@ -86,7 +86,7 @@ Para el correcto funcionamiento del proyecto, es esencial seguir el orden de eje
    python anomaly.py
    ```
 3. **Visualization**: 
-   - Ejecuta el archivo `anomaly` situado dentro del subproyecto `Visualization`.
+   - Ejecuta el archivo `visualization` situado dentro del subproyecto `Visualization`.
    ```sh
    cd ../Visualization
    python visualization.py
