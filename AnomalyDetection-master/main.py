@@ -92,7 +92,7 @@ def run_combination(combination):
     df['degree'] = degrees
     f, c = df[df["pred"] == 1].shape
     print(f"Filas- {f}")
-    df.to_csv(os.path.join(ruta_padre, 'anomalo.csv'), index=False)
+    df.to_csv(os.path.join(ruta_padre, 'anomalo.csv'))
     print("Terminado\n")
 
 

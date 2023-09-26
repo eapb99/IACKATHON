@@ -61,7 +61,6 @@ cover/
 *.iml
 *.xml
 *.csv
-*.json
 # Django stuff:
 *.log
 local_settings.py
