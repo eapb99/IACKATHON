@@ -4,6 +4,7 @@
 En Ecuador, el problema de la corrupción en los procesos de compras públicas es cada vez más agravante. Con lo sucedido en la pandemia del Covid-19 en el año 2020 involucrando el sector Salud, era claro que se debían buscar formas más eficientes y rápidas para detectar anomalías en estos procesos. Por esto, se desarrolló este proyecto el cual se enfoca en detectar proveedores con comportamientos anómalos en su historial de compras públicas de un determinado período de tiempo. 
 ### Metodología 
 ![image](https://github.com/eapb99/IACKATHON/assets/73547550/29b0751b-f2be-4e47-ae92-22816e8b2892)
+
 A continuación los pasos a detalle:
 1. Se recolectaron datos desde la API OCDS para el SERCOP del sector Salud para el 2020.
 2. Luego de analizar los datos estadísticamente, se crearon y calcularon métricas las cuales puedan modelar el comportamiento de los proveedores al subastar. Para una revisión más a fondo revisar el siguiente documento: (link a drive pdf de métricas)
