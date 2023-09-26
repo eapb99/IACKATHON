@@ -63,7 +63,7 @@ def main(adjacency_matrix_file, dataframe_file, output_file, old_names, new_name
 if __name__ == "__main__":
     adjacency_matrix_file = os.path.join(ruta_padre, 'matriz.dat')
     dataframe_file = os.path.join(ruta_padre, 'anomalo.csv')
-    output_file = os.path.join(ruta_padre, "grafo-colect-3.html")
+    output_file = "grafo-colect-3.html"
     old_names = ["% colectivos", "% perdidos", "ofertados", "desviacion_mean_colectivos",
                  "diff_planning_mean_colectivos",
                  "desviacion_mean_perdidos", "diff_award_mean_perdidos", "diff_planning_mean_perdidos",
