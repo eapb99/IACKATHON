@@ -246,7 +246,8 @@ La data recopilada del API OCDS corresponde a los contratos de tipo SUBASTA INVE
 ```
 
 ## Resultados
-
+La visualización resultante es el archivo `grafo-colect-3.html` que se encuentra dentro del subproyecto `Visualization`.
+Abrir el archivo `.html` en cualquier navegador, se recomienda Google Chrome.
 ### Capturas
 
 ![image](https://github.com/eapb99/IACKATHON/assets/73547550/cf20e4f6-f37a-4e4d-bf76-d61946b1d6bb)
