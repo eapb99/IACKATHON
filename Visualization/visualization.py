@@ -32,7 +32,7 @@ def create_graph(adjacency_matrix, df):
     df.drop(['probabilidad', 'score', 'confidence'], inplace=True, axis=1)
     for index, row in df.iterrows():
         node_id = index
-        G.nodes[node_id]["label"] = row["Id_RUC"]
+        G.nodes[node_id]["label"] = ""
         G.nodes[node_id]["size"] = row["Ofertados"]
         for column in df.columns:
             if column not in ["Id_RUC", "Ofertados"]:
