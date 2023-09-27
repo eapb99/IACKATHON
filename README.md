@@ -20,8 +20,8 @@
     + [Nodos interactivos](#nodos-interactivos)
     + [Filtrar nodos](#filtrar-nodos)
   * [Implicaciones éticas y legales](#implicaciones-éticas-y-legales)
-  * [Resultados](#resultados)
-  * [Dataset Utilizado](#dataset-utilizado)
+
+
 
 ## Nuestro Enfoque
 En Ecuador, el problema de la corrupción en los procesos de compras públicas es cada vez más agravante. Con lo sucedido en la pandemia del Covid-19 en el año 2020 involucrando el sector Salud, era claro que se debían buscar formas más eficientes y rápidas para detectar anomalías en estos procesos. Por esto, se desarrolló este proyecto el cual se enfoca en detectar proveedores con comportamientos anómalos en su historial de compras públicas de un determinado período de tiempo. 
