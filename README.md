@@ -16,6 +16,11 @@
   * [Orden de ejecución](#orden-de-ejecución)
   * [Dataset Utilizado](#dataset-utilizado)
   * [Resultados](#resultados)
+    + [Capturas](#capturas)
+    + [Nodos interactivos](#nodos-interactivos)
+    + [Filtrar nodos](#filtrar-nodos)
+  * [Implicaciones éticas y legales](#implicaciones-éticas-y-legales)
+  * [Resultados](#resultados)
   * [Dataset Utilizado](#dataset-utilizado)
 
 ## Nuestro Enfoque
